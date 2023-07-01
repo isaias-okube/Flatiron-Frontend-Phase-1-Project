@@ -55,6 +55,7 @@ function getRecipeByCocktail(e) {
 }
 
 function renderAllRecipes(recipes) {
+    recipeContainer.replaceChildren();
     recipes.forEach(recipe => {
         renderRecipeCard(recipe);
     });
@@ -71,8 +72,16 @@ console.log(recipe);
     const img = document.createElement("img");
     img.src = strDrinkThumb;
 
-    cardDiv.append(img);
+    const titel = document.createElement("h3");
+    titel.textContent = strDrink;
+
+    cardDiv.append(img, titel);
     recipeContainer.append(cardDiv);
 }
+
+
+
+
+
 
     
