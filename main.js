@@ -9,7 +9,7 @@ getCocktails();
 getCategories();
 // Event Listeners
 cocktailSelect.addEventListener("change",getRecipeByCocktail);
-cataegorySelect.addEventListener("change",getRecipeByCocktail);
+cataegorySelect.addEventListener("change",getRecipeByCategory);
 
     // Functions
 function getCocktails() {
@@ -53,6 +53,16 @@ function getRecipeByCocktail(e) {
         .then(recipes=> renderAllRecipes(recipes.drinks))
         .catch(error =>alert(error))
 }
+
+function getRecipeByCategory(e) {
+    const category = e.target.value;
+
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`)
+        .then((response) => response.json())
+        .then(recipes=> renderAllRecipes(recipes.drinks))
+        .catch(error =>alert(error))
+}
+
 
 function renderAllRecipes(recipes) {
     recipeContainer.replaceChildren();
