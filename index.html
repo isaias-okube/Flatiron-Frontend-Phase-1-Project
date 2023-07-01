@@ -13,20 +13,36 @@
 <body>
     <header class="header">
         <h1 class="main-title">Cocktail Search</h1>
+
         <!-- Search-->
+        <section class="search">
         <select name="cocktails" id="cocktails">
             <option value="">Search for a Cocktail...</option>
         </select>
         <select name="categories" id="categories">
             <option value="">Select a Category</option>
         </select>
+        </section>
+        <!-- ---- -->
     </header>
+
     <!-- Recipe section-->
     <section class="recipe-section">
         <h1 class="selection-heading"></h1>
         <div class="recipe-container">
         </section>
-    
+    <!-- ---- -->
+
+    <!-- Recipe Detail Section-->
+    <section class="recipe-details-section">
+        <h1 class="recipe-details-container card"></h1>
+        <div class="recipe-details-container title"></div>
+        <div class="recipe-details-container image"></div>
+        <div class="recipe-details-container ingredients"></div>
+        <div class="recipe-details-container directions"></div>
+        <div class="recipe-details-resources"></div>
+    </section>
+    <!-- ---- -->
     <script src="./main.js"></script>
 </body>
 </html> 

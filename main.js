@@ -74,10 +74,12 @@ function renderAllRecipes(recipes) {
 }
 
 function renderRecipeCard(recipe) {
-    const { strDrink, strDrinkThumb, strInstructions} = recipe;
-console.log(recipe);
+    const {idDrink,strDrink,strDrinkThumb,strInstructions,} = recipe;
+
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
+    //add event listener to cardDiv
+    cardDiv.addEventListener("click", e => getRecipeDetails(e, idDrink));
 
     const img = document.createElement("img");
     img.src = strDrinkThumb;
@@ -89,9 +91,10 @@ console.log(recipe);
     recipeContainer.append(cardDiv);
 }
 
-
-
-
-
-
+function getRecipeDetails(e, idDrink) {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink}`)
+        .then((response) => response.json())
+        .then(recipe => console.log(recipe.drinks[0]))
+        .catch(error =>alert(error))
+}
     
