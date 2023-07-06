@@ -151,3 +151,26 @@ function renderRecipeDetails(recipeDetails) {
     titelArea.append(title);
 
 
+//Image Area
+const imageArea = document.querySelector(".recipe-details-image");
+const recipeImage = document.createElement("img");
+recipeImage.src = strDrinkThumb;
+recipeImage.alt = `Image for ${strDrinkThumb}`;
+imageArea.replaceChildren();
+imageArea.append(recipeImage);
+
+//Ingredients Area
+const ingredients = parseIngredients(recipeDetails);
+const ingredientPs = ingredients.map(ingredient => {
+const ingredientP = document.createElement("p");
+ingredientP.textContent = ingredient;
+return ingredientP;
+});
+const ingredientsArea = document.querySelector(".recipe-details-ingredients");
+const ingredientsTitle = document.createElement("h3");
+ingredientsTitle.textContent = "Ingredients";
+ingredientsTitle.style.textDecoration = "underline";
+ingredientsArea.replaceChildren();
+ingredientsArea.append(ingredientsTitle, ...ingredientPs);
+
+//Directions Area
