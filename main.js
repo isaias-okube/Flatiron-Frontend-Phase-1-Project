@@ -174,3 +174,39 @@ ingredientsArea.replaceChildren();
 ingredientsArea.append(ingredientsTitle, ...ingredientPs);
 
 //Directions Area
+const directionsArea = document.querySelector(".recipe-details-directions");
+const directionsTitle = document.createElement("h3");
+const directionsP= document.createElement("p");
+directionsTitle.textContent = "Directions";
+directionsTitle.style.textDecoration = "underline";
+directionsArea.replaceChildren();
+directionsP.textContent = strInstructions;
+directionsArea.append(directionsTitle, directionsP);
+
+//Resource Area
+const resourceArea = document.querySelector(".recipe-details-resources");
+const youTubeLinkTag = document.createElement("a");
+youTubeLinkTag.href = strYoutube;
+youTubeLinkTag.text = `How to make ${strDrink} on YouTube`;
+youTubeLinkTag.target = "_blank";
+const cocktailCategory = document.createElement("p");
+cocktailCategory.textContent = `Category: ${strCategory}`;
+
+resourceArea.replaceChildren();
+resourceArea.append(youTubeLinkTag, cocktailCategory);
+}
+
+function parseIngredients(recipeDetails) {
+const ingredients = [];
+for (let i = 1; i <= 15; i++) {
+    const ingredient = recipeDetails[`strIngredient${i}`];
+    const measure = recipeDetails[`strMeasure${i}`];
+    if (ingredient) {
+        ingredients.push(`${ingredient} - ${measure}`);
+    }
+}
+return ingredients;
+}
+
+
+
