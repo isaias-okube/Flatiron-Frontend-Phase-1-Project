@@ -357,7 +357,7 @@ function renderRecipeDetails(recipeDetails) {
     const youTubeLinkTag = document.createElement("a");
     youTubeLinkTag.href = strYoutube;
     youTubeLinkTag.text = `How to make ${strDrink} on YouTube`;
-    youTubeLinkTag.target = "strYoutube";
+    youTubeLinkTag.target = "_blank";
     const cocktailCategory = document.createElement("p");
     cocktailCategory.textContent = `Category: ${strCategory}`;
 
@@ -382,5 +382,8 @@ function parseIngredients(recipeDetails) {
         return ingredientP;
     });
 }
+
+
+
 
 

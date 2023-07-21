@@ -14,8 +14,8 @@
 
 ### Obligatory
 
-- html ,css ,js
-- public API or db.json
+- [x]html ,css ,js
+- [x]public API or db.json
 - 2 distinct event listeners
 - iterating through arrays
 - need to use array methods
