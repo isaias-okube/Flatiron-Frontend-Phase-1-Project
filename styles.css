@@ -1,7 +1,7 @@
 /* Global styles */
 html {
   font-family: "Poppins", sans-serif;
-  background-color:rgb(228, 238, 211)
+  background-color:rgb(222, 235, 217)
 }
 
 /* Header styles */
@@ -21,7 +21,7 @@ html {
   max-width: 90%;
   margin: 50px auto;
   padding: 30px;
-  background-color: rgb(224, 230, 145);
+  background-color: rgb(231, 233, 199);
   border-radius: 15px;
   box-shadow: 0 4px 12px rgb(249, 224, 176) ;
   display: grid;
