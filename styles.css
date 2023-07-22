@@ -138,3 +138,19 @@ html {
   }
 }
 
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .welcome {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: none;
+    margin: 20px auto;
+  }
+}
+
