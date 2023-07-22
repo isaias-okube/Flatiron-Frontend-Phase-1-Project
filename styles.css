@@ -154,18 +154,6 @@ html {
   }
 }
 
-/* Desktop styles */
-@media (min-width: 1024px) {
-  .welcome {
-    grid-template-columns: 1fr;
-  }
 
-  .recipe-container {
-    grid-template-columns: 1fr;
-  }
 
-  .card {
-    max-width: none;
-    margin: 20px auto;
-  }
-}
+
