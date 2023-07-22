@@ -161,9 +161,9 @@ function renderRecipeDetails(recipeDetails) {
     // Resource Area
     const resourceArea = document.querySelector(".recipe-details-resources");
     const youTubeLinkTag = document.createElement("a");
-    youTubeLinkTag.href = strYoutube;
+    youTubeLinkTag.href = "https://www.youtube.com/watch?v="
     youTubeLinkTag.text = `How to make ${strDrink} on YouTube`;
-    youTubeLinkTag.target = "_blank";
+    youTubeLinkTag.target = "youtube";
     const cocktailCategory = document.createElement("p");
     cocktailCategory.textContent = `Category: ${strCategory}`;
 
