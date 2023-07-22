@@ -16,13 +16,13 @@
 
 - [x]html ,css ,js
 - [x]public API or db.json
-- 2 distinct event listeners
-- iterating through arrays
-- need to use array methods
-- single page only
-- 30+ commits
-- render data in the HTML DOM
-- array, 5 objects, 4 key-value pairs
+- [x]2 distinct event listeners
+- [x]iterating through arrays
+- [x]need to use array methods
+- [x]single page only
+- [x]30+ commits
+- [x]render data in the HTML DOM
+- [x]array, 5 objects, 4 key-value pairs
 
 ### Extras
 
